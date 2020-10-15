@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const {generateMarkdown} = require("./utils/generateMarkdown");
+const {generateMarkdown} = require("./utils/generateMarkdown.js");
 
 
 // array of questions for user
@@ -9,7 +9,7 @@ const questions = [
     {
         type: "input",
         message: "Name of the project:",
-        name: "projectName"
+        name: "title"
     },
     {
         type: "input",
@@ -19,12 +19,12 @@ const questions = [
     {
         type: "input",
         message: "Add an installation instructions for this program if needed:",
-        name: "installGuide"
+        name: "install"
     },
     {
         type: "input",
         message: "Add a guide for the users:",
-        name: "usageGuide"
+        name: "usage"
     },
     {
         type: "input",
@@ -32,18 +32,18 @@ const questions = [
         name: "collaborators"
     },
     {
-        type: "choice",
+        type: "list",
         message: "Pick a license for this project:",
         choices:[ // from https://opensource.org/licenses
-            "Apache License 2.0",
-            "BSD 3-Clause",
-            "BSD 2-Clause",
-            "GNU General Public License (GPL)",
-            "GNU Library General Public License (LGPL)",  
+            "Apache_2.0",
+            "BSD3",
+            "BSD2",
+            "GPL",
+            "LGPL",  
             "MIT", 
-            "Mozilla Public License 2.0",
-            "Common Development and Distribution License",
-            "Eclipse Public License v2.0"],
+            "Mozilla_PL_2.0",
+            "Common_DDL",
+            "Eclipse_PL_v2.0"],
         name: "selectedLicense"
     },
     {

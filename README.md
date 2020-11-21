@@ -25,6 +25,7 @@ MIT
 
 #### Questions?
 You can reach out to me via Github [![GitHub Link](https://img.shields.io/badge/Github-umutamac-lightgrey.svg)](https://github.com/umutamac)
+
 Alternatively, my email is: amacalptekin@gmail.com
 
 #### Additional Information

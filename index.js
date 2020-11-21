@@ -3,12 +3,11 @@ const fs = require("fs");
 const util = require("util");
 const {generateMarkdown} = require("./utils/generateMarkdown.js");
 
-
 // array of questions for user
 const questions = [
     {
         type: "input",
-        message: "Name of the project:",
+        message: "Title of the project:",
         name: "title"
     },
     {
@@ -18,8 +17,8 @@ const questions = [
     },
     {
         type: "input",
-        message: "Add an installation instructions for this program if needed:",
-        name: "install"
+        message: "Add an installation instructions for this program if necessary:",
+        name: "installGuide"
     },
     {
         type: "input",
@@ -34,16 +33,8 @@ const questions = [
     {
         type: "list",
         message: "Pick a license for this project:",
-        choices:[ // from https://opensource.org/licenses
-            "Apache_2.0",
-            "BSD3",
-            "BSD2",
-            "GPL",
-            "LGPL",  
-            "MIT", 
-            "Mozilla_PL_2.0",
-            "Common_DDL",
-            "Eclipse_PL_v2.0"],
+        choices:["Apache_2.0","BSD3","BSD2","GPL","LGPL","MIT","Mozilla_PL_2.0","Common_DDL","Eclipse_PL_v2.0"],
+        // from https://opensource.org/licenses
         name: "selectedLicense"
     },
     {
@@ -55,6 +46,11 @@ const questions = [
         type: "input",
         message: "Your email address:",
         name: "creatorEmail"
+    },
+    {
+        type: "input",
+        message: "Any additional information:",
+        name: "additInfo"
     }
 ];
 
